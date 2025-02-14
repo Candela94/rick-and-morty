@@ -1,0 +1,119 @@
+
+
+.Nav{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color:#393939 ;
+    padding: 2rem;
+    border-radius: 40px 40px 0 0;
+}
+
+
+.Nav-ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Nav-ul li{
+    list-style: none;
+}
+
+
+.Nav-item{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items:  center;
+    color: var(--text);
+    transition: transform 0.3s ease;
+}
+
+.Nav-item:active{
+    transform: scale(0.8);
+}
+
+.Nav-item svg{
+    width: 28px;
+}
+
+.Nav-item i{
+    font-size: 28px;
+}
+
+.Nav-item p{
+
+font-size: 12px;
+font-weight: lighter;
+
+}
+
+
+
+
+
+
+
+/* ---------------- */
+/*     Tablets */
+/* ---------------- */
+
+
+@media screen  and (min-width: 768px) and (max-width:1000px){
+  
+ 
+  
+   .Nav-item p{
+
+    font-size: 14px;
+    
+    
+    }
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  /* ---------------- */
+  /*     Dekstop      */
+  /* ---------------- */
+  
+  
+  
+  @media screen  and (min-width: 1024px) and (max-width:1281px){
+  
+
+
+
+
+.Nav{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color:#393939 ;
+    padding: 2rem 1rem;
+    border-radius: 0 0 40px 40px;
+}
+
+
+    .Nav-item p{
+
+        font-size: 16px;
+        
+        
+        }
+      
+      
+      
+      }
+    
+
+
+  
+    
+  

@@ -1,0 +1,51 @@
+
+
+
+/* Buscador  */
+
+
+.Buscador{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+input {
+    padding: 0.7rem;
+    width: 60%;
+    border-radius:8px;
+    border: 1px solid var(--primary);
+    background-color: #393939;
+    color: rgb(197, 197, 197);
+    font-style: oblique;
+    transition: border 0.3s ease, box-shadow 0.3s ease
+}
+
+
+input:focus{
+    border: 1px solid var(--secondary);
+    outline: none;
+    box-shadow: 1px 1px 8px var(--secondary);
+}
+
+
+.Input-filtros{
+    padding: 0.3rem;
+    border-radius:100%;
+   outline: none;
+    background-color: #393939;
+    color: rgb(197, 197, 197);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+.Input-filtros:active{
+    transform:scale(0.8);
+}
+
+
+.Input-filtros svg{
+
+    width: 24px;
+}

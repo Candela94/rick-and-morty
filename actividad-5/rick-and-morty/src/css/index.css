@@ -1,0 +1,32 @@
+
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+
+
+ font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+--background:  #242424;
+--primary: #a1f771;
+--secondary: #2FD7D8;
+--text: rgba(243, 246, 242, 0.8);
+
+
+}
+
+
+a {
+  text-decoration: inherit;
+}
+
+
+
+body {
+  background-color: var(--background);
+}
+

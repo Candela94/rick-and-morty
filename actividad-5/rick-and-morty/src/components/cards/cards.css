@@ -1,0 +1,48 @@
+
+.Galeria{
+
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+
+.Main{
+    padding: 1rem;
+}
+
+.Card{
+    display: flex;
+    width: 200px;
+    flex-direction: column; 
+    border-radius: 8px;
+    gap: 1rem;
+    padding: 1rem;
+    color: var(--text);
+    background-color: #2d2d2d;
+    transition: transform 0.3s ease;
+  
+}
+
+
+.Card:hover{
+    transform: scale(1.05);
+}
+
+.Card-img{
+    width: 100%;
+    border-radius: 6px;
+}
+
+.Card-informacion{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Card-p{
+    font-size: 14px;
+    color: grey;
+}
