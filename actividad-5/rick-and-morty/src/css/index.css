@@ -30,3 +30,18 @@ body {
   background-color: var(--background);
 }
 
+
+
+
+
+/* Página personajes */
+
+
+.Main-personajes{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+

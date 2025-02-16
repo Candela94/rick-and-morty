@@ -5,7 +5,7 @@ import './footer.css';
 
 
 
-export const Nav = () => {
+export const Nav = ({}) => {
 
 
 
@@ -33,7 +33,7 @@ export const Nav = () => {
 
                     <li><a href="#"><div className="Nav-item">
 
-                        <i className="fa-brands fa-reddit-alien"></i>
+                       <img src="../public/img/rick-icono.png" alt="rick" style={{width: '48px'}} />
                         <p>Personajes</p>
                     </div>
                     </a></li>

@@ -1,8 +1,133 @@
 
+/* Header */
+
+
+.Header-nav{
+    display: flex;
+    
+    justify-content: center;
+
+}
+
+
+.Header-img{
+    width: 300px;
+}
+
+
+
+
+
+
+/* Subheader */
+
+
+.SubHeader{
+    padding: 1rem;
+    position:relative;
+    transition: margin-top 0.3s ease;
+}
+
+.SubHeader.open{
+    margin-bottom: 30px;
+}
+
+
+.SubHeader-ul{
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+
+.SubHeader-li{
+    list-style: none;
+    
+}
+
+
+.Filtros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-family:Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; 
+    border: none;
+    background: none;
+  
+    color: var(--text);
+    border-bottom: 0.1px solid var(--text);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+
+.Filtros:active{
+    transform: scale(0.8);
+}
+
+
+.Filtros-p{
+    text-align: center;
+}
+
+
+
+
+
+/* menu desplegable */
+
+.Menu-navFiltro{
+    position: absolute;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    background-color: #393939;
+    top: 100%;
+    left: 0;
+    margin:3px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.5s ease-out;
+    
+   
+}
+
+
+.Menu-navFiltro.open {
+    opacity: 1;
+    max-height: 200px;
+}
+
+
+.Menu-ul{
+  
+    display: flex;
+   gap: 6rem;
+}
+
+.Menu-ul li{
+    list-style: none;
+}
+
+
+
+.Menu-buttons{
+    border: none;
+    background:none;
+    color: var(--text);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.Menu-buttons:active {
+    transform: scale(0.8);
+}
+
 
 
 /* Buscador  */
-
 
 .Buscador{
     display: flex;
@@ -31,10 +156,12 @@ input:focus{
 
 .Input-filtros{
     padding: 0.3rem;
-    border-radius:100%;
-   outline: none;
-    background-color: #393939;
-    color: rgb(197, 197, 197);
+border: none ;
+background:none;
+    outline: none;
+    color: rgb(210, 210, 210);
+   
+  
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -49,3 +176,5 @@ input:focus{
 
     width: 24px;
 }
+
+
