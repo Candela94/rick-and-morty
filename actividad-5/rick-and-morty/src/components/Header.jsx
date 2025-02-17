@@ -63,9 +63,9 @@ return(
 
             <nav className={`Menu-navFiltro ${menu === 'genero' ? 'open' : ''}`}>
                 <ul className="Menu-ul">
-                    <li><button  onClick={handleGenero('Female')} className="Menu-buttons">Male</button></li>
-                    <li><button onClick={handleGenero('Male')}  className="Menu-buttons">Female</button></li>
-                    <li><button onClick={handleGenero('Alien')}  className="Menu-buttons">Alien</button></li>
+                    <li><button className="Menu-buttons">Male</button></li>
+                    <li><button className="Menu-buttons">Female</button></li>
+                    <li><button className="Menu-buttons">Alien</button></li>
                 </ul>
             </nav>
 
@@ -90,8 +90,8 @@ return(
 
 <nav className={`Menu-navFiltro ${menu === 'especie' ? 'open' : ''}`}>
     <ul className="Menu-ul">
-        <li><button className="Menu-buttons">Huo</button></li>
-        <li><button className="Menu-buttons">Alien</button></li>
+        <li><button  className="Menu-buttons">Humano</button></li>
+        <li><button  className="Menu-buttons">Alien</button></li>
      
     </ul>
 </nav>

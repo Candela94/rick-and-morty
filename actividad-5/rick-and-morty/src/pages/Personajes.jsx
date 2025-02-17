@@ -34,27 +34,49 @@ const Personajes = () => {
     // const [busqueda, setBusqueda] = useState("") 
 
     const [filtroGenero, setFiltroGenero] = useState("")
+    const [filtroEspecie, setFiltroEspecie] = useState("")
+    const [filtroEstado, setFiltroEstado] = useState("")
+
+
+
 
     const [pagina, setPagina] = useState(1)
-    const limit = 4;
-
-
-
-    // const [filtroEstado, setFiltroEstado] = useState("")
-    // const [filtroEspecia, setFiltroEspecie]= useState("")
+   
 
 
 
 
     const obtenerDatos = async () => {
 
-        const response = await fetch(`https://rickandmortyapi.com/api/character?limit=${limit}&page=${pagina}`)
+        const response = await fetch(`https://rickandmortyapi.com/api/character?&page=${pagina}&name=${searchTerm}`)
         const jsonData = await response.json();
         setDatos(jsonData);
-        setPersonajes(jsonData.results)
+        // setPersonajes(jsonData.results)
 
 
     }
+
+
+
+    
+    
+
+    useEffect(() => {
+
+        if(searchTerm.length>3){
+
+            obtenerDatos();
+        }
+
+        
+       
+        console.log(`pagina actual ${pagina}`)
+
+       
+    }, [pagina, searchTerm, filtroGenero, filtroEspecie, filtroEstado])
+
+
+
 
     const handleNext = () => {
 
@@ -68,13 +90,7 @@ const Personajes = () => {
     }
 
 
-    useEffect(() => {
-
-        obtenerDatos();
-        console.log(`pagina actual ${pagina}`)
-
-
-    }, [pagina])
+ 
 
 
 
@@ -82,37 +98,38 @@ const Personajes = () => {
 
 
 
-    useEffect(() => {
-        // Solo filtrar si datos.results está disponible
-        if (datos.results) {
-            let filtered = datos.results
+    // useEffect(() => {
+    //     // Solo filtrar si datos.results está disponible
+    //     if (datos.results) {
+    //         let filtered = datos.results
 
 
-            //Filtro por nombre 
-            if (searchTerm !== "") {
+    //         //Filtro por nombre 
+    //         if (searchTerm !== "") {
 
-                filtered = datos.results.filter((pers) =>
-                    pers.name.toLowerCase().includes(searchTerm.toLowerCase())
-                );
-            }
+    //             filtered = datos.results.filter((pers) =>
+    //                 pers.name.toLowerCase().includes(searchTerm.toLowerCase())
+    //             );
+    //         }
 
-            //Filtro por género
-            if (filtroGenero !=="") {
-                filtered = filtered.filter((pers) => pers.gender === filtroGenero)
-            }
+    //         //Filtro por género
+    //         if (filtroGenero !== "") {
+    //             filtered = filtered.filter((pers) => pers.gender === filtroGenero)
+    //         }
+    //         console.log(filtroGenero)
 
 
-            setPersonajes(filtered);
-        }
-    }, [searchTerm, datos, filtroGenero]);
+    //         setPersonajes(filtered);
+    //     }
+    // }, [searchTerm, datos, filtroGenero]);
 
 
 
     //Filtro por genero
 
-    const handleGenero = (genero) => {
-        setFiltroGenero(genero)   //Alternar entre los géneros
-    }
+    // const handleGenero = (genero) => {
+    //     setFiltroGenero(genero)   //Alternar entre los géneros
+    // }
 
 
 
@@ -122,9 +139,9 @@ const Personajes = () => {
         <>
             <main className="Main-personajes">
                 <h1 className="Main-h1">Personajes</h1>
-                <Buscador setSearchTerm={setSearchTerm} />
+                <Buscador setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
 
-                <SubHeader handleGenero={handleGenero} />
+                <SubHeader  />
                 <div className="Paginacion">
                     <LuChevronsLeft onClick={handleAnt} style={{ color: 'rgba(243, 246, 242, 0.6)', cursor: 'pointer' }} />
                     <p style={{ color: 'rgba(243, 246, 242, 0.6)', fontSize: '12px' }}>Estás en la página {pagina}</p>
@@ -176,8 +193,8 @@ const Personajes = () => {
                             );
                         })
                     ) : (
-                        <p style={{color:'rgba(243, 246, 242, 0.8)'}}>No se encontraron personajes  <GiDeadHead />
-</p>
+                        <p style={{ color: 'rgba(243, 246, 242, 0.8)' }}>No se encontraron personajes  <GiDeadHead />
+                        </p>
                     )}
                 </div>
             </main>
