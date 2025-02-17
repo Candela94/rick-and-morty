@@ -68,3 +68,37 @@
     font-size: 14px;
     color: grey;
 }
+
+
+
+/* card lugares */
+
+
+.Card-lugares{
+    display: flex;
+  
+    border-radius: 8px;
+    gap: 1rem;
+    padding: 1rem;
+    color: var(--text);
+    background-color: #2d2d2d;
+    transition: transform 0.3s ease;
+  
+}
+
+
+.Card-lugares:hover{
+    transform: scale(1.05);
+}
+
+.Card-imgLugar{
+    width: 100%;
+    border-radius: 6px;
+}
+
+
+.Residentes{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}

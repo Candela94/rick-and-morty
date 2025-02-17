@@ -8,8 +8,6 @@ import './footer.css';
 export const Nav = ({}) => {
 
 
-
-
     return (
 
 
@@ -18,7 +16,7 @@ export const Nav = ({}) => {
             <nav className='Nav'>
                 <ul className='Nav-ul'>
 
-                    <li><a href="#"><div className="Nav-item">
+                    <li><a href="./episodios"><div className="Nav-item">
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -31,7 +29,7 @@ export const Nav = ({}) => {
 
 
 
-                    <li><a href="#"><div className="Nav-item">
+                    <li><a href="./personajes"><div className="Nav-item">
 
                        <img src="../public/img/rick-icono.png" alt="rick" style={{width: '48px'}} />
                         <p>Personajes</p>
@@ -40,7 +38,7 @@ export const Nav = ({}) => {
 
 
 
-                    <li><a href="#"><div className="Nav-item">
+                    <li><a href="./lugares"><div className="Nav-item">
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />

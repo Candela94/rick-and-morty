@@ -12,6 +12,11 @@
 
 .Header-img{
     width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.Header-img:active{
+    transform: scale(0.8);
 }
 
 
@@ -25,7 +30,7 @@
 .SubHeader{
     padding: 1rem;
     position:relative;
-    transition: margin-top 0.3s ease;
+    transition: margin-bottom 0.3s ease;
 }
 
 .SubHeader.open{
@@ -81,30 +86,26 @@
 .Menu-navFiltro{
     position: absolute;
     padding: 0.5rem 1.5rem;
-    border-radius: 20px;
+    border-radius: 8px;
     background-color: #393939;
     top: 100%;
     left: 0;
     margin:3px;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.3s ease, max-height 0.5s ease-out;
-    
+
+
    
 }
 
 
 .Menu-navFiltro.open {
-    opacity: 1;
-    max-height: 200px;
+  
 }
 
 
 .Menu-ul{
   
     display: flex;
-   gap: 6rem;
+   gap: 1rem;
 }
 
 .Menu-ul li{
@@ -118,6 +119,8 @@
     background:none;
     color: var(--text);
     cursor: pointer;
+    padding-right: 1rem;
+    border-right: 0.3px solid var(--text);
     transition: transform 0.3s ease;
 }
 

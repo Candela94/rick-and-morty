@@ -7,7 +7,7 @@ const Episodios = () => {
     return (
 
         <>
-        
+        <h1>episodios</h1>
         </>
     )
 }

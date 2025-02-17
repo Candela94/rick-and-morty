@@ -41,10 +41,12 @@ function App() {
  
  <Header />
 
- <Personajes />
+{/* 
+<Inicio /> */}
+ {page}
 
 
-     {/* <Buscador />  */}
+    
     <Nav />
   
 

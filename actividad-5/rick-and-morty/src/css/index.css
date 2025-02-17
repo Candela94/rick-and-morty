@@ -22,6 +22,7 @@
 
 a {
   text-decoration: inherit;
+  color: var(--text);
 }
 
 
@@ -31,6 +32,57 @@ body {
 }
 
 
+
+
+
+
+
+
+
+/* inicio */
+
+.Inicio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+ 
+}
+
+
+.Inicio-img{
+  width: 70%;
+
+}
+
+
+.Intro-button{
+  padding: 0.7rem 1.5rem;
+  background:none;
+  border: 1px solid var(--secondary);
+  color: var(--text);
+  border-radius: 8px;
+  box-shadow: 0.5px 0.5px 8px;
+  transition: transform 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+  
+}
+
+
+.Intro-button:active{
+  transform: scale(0.8);
+}
+
+.Intro-button:hover{
+  border: 1px solid var(--primary);
+}
+
+
+.Inicio-img2{
+  width: 20%;
+}
 
 
 
@@ -44,4 +96,15 @@ body {
   margin: 1rem;
 }
 
+.Paginacion{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
 
+
+.Main-h1{
+  color: var(--text);
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+}

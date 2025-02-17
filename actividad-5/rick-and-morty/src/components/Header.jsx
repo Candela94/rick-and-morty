@@ -13,7 +13,7 @@ export const  Header = () => {
         
         <header className="Header">
             <nav className="Header-nav">
-                <img className = "Header-img" src="./public/img/rick-morty.png" alt="logo" />
+                <a href="/inicio"><img className = "Header-img" src="./public/img/rick-morty.png" alt="logo" /></a>
             </nav>
         </header>
         
@@ -28,7 +28,7 @@ export const  Header = () => {
 
 
 
-export const SubHeader = ({handleFemenino}) => {
+export const SubHeader = ({handleGenero}) => {
 
 
 
@@ -41,23 +41,7 @@ const handleAbrirMenu = (categoria) => {
    
 }
 
-const handleGenero = (genero) => {
-    setFiltroGenero(genero)
-    setMenu(null)
-}
-  
 
-const handleEstado= (estado) => {
-    setFiltroEstado(estado)
-    setMenu(null)
-}
-    
-
-
-const handleEspecie = (especie) => {
-    setFiltroEspecie(especie)
-    setMenu(null)
-}
 
 return(
     <>
@@ -66,7 +50,7 @@ return(
     <header className={`SubHeader ${menu ? 'open' : ''}`}> 
 
 
-<nav className="SubHeader-nav">
+  <nav className="SubHeader-nav">
     <ul className="SubHeader-ul">
         <li className="SubHeader-li">
             <button onClick={() => handleAbrirMenu ('genero')} className="Filtros">
@@ -79,9 +63,9 @@ return(
 
             <nav className={`Menu-navFiltro ${menu === 'genero' ? 'open' : ''}`}>
                 <ul className="Menu-ul">
-                    <li><button className="Menu-buttons">Male</button></li>
-                    <li><button onClick={handleFemenino}className="Menu-buttons">Female</button></li>
-                    <li><button className="Menu-buttons">Alien</button></li>
+                    <li><button  onClick={handleGenero('Female')} className="Menu-buttons">Male</button></li>
+                    <li><button onClick={handleGenero('Male')}  className="Menu-buttons">Female</button></li>
+                    <li><button onClick={handleGenero('Alien')}  className="Menu-buttons">Alien</button></li>
                 </ul>
             </nav>
 
@@ -106,7 +90,7 @@ return(
 
 <nav className={`Menu-navFiltro ${menu === 'especie' ? 'open' : ''}`}>
     <ul className="Menu-ul">
-        <li><button className="Menu-buttons">Huamno</button></li>
+        <li><button className="Menu-buttons">Huo</button></li>
         <li><button className="Menu-buttons">Alien</button></li>
      
     </ul>
