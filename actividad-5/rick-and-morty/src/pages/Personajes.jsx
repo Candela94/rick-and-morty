@@ -57,7 +57,9 @@ const Personajes = () => {
     }
 
 
-
+useEffect(() => {
+    obtenerDatos()
+},[])
     
     
 
