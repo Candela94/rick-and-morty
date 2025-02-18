@@ -12,6 +12,7 @@ import { CardEpisodios } from "@/components/cards/Cards";
 
 
 const Episodios = () => {
+    
     const [searchTerm, setSearchTerm] = useState("");
 
     const [pagina, setPagina] = useState(1)

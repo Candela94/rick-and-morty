@@ -72,15 +72,15 @@ const Personajes = () => {
         let url = `https://rickandmortyapi.com/api/character?&page=${pagina}&name=${searchTerm}`
 
         if(filtroGenero) {
-            url += `&gender=${filtroGenero}`
+            
         }
 
         if(filtroEstado) {
-            url += `&status=${filtroEstado}`
+          
         }
 
         if(filtroEspecie) {
-            url += `&species=${filtroEspecie}`
+            
         }
 
         return url;
