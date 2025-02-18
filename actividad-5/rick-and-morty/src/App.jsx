@@ -21,6 +21,8 @@ import Lugares from './pages/Lugares'
 import Inicio from './pages/Inicio'
 
 import { BrowserRouter, Route, Routes } from 'react-router'
+import { CheckBox } from './components/CheckBox'
+
 
 
 
@@ -35,7 +37,7 @@ function App() {
   return (
     <>
  
-    <BrowserRouter> 
+   <BrowserRouter> 
     
     
     <Routes>
@@ -50,6 +52,7 @@ function App() {
     
     
     </BrowserRouter>
+ 
 
 
 

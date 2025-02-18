@@ -47,14 +47,24 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-
+  height: 100vh;
+  position: relative;
  
 }
 
 
 .Inicio-img{
   width: 70%;
+  
 
+}
+
+.Titulo{
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 35%;
 }
 
 
@@ -81,10 +91,23 @@ body {
 
 
 .Inicio-img2{
-  width: 20%;
+  width: 15%;
 }
 
+.Meeseeks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.Circle{
+  width: 25%;
+  height: 5px;
+  background-color: #52b61c;
+  border-radius: 100%;
+  box-shadow: 1px 1px 10px #a1f771 ;
+}
 
 /* Página personajes */
 
@@ -129,4 +152,5 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-bottom: 7rem;
 }

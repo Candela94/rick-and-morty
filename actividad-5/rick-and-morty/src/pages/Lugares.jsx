@@ -58,7 +58,7 @@ const Lugares = () => {
     }, [searchTerm, data]);
 
     const obtenerLugares = async () => {
-        const response = await fetch(`https://rickandmortyapi.com/api/location&page=${pagina}&name=${searchTerm}`)
+        const response = await fetch(`https://rickandmortyapi.com/api/location?page=${pagina}&name=${searchTerm}`)
         const jsonData = await response.json();
 
         setData(jsonData);

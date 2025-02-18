@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import { CheckBox } from "./CheckBox"
 
 
 export const Buscador = ({ setSearchTerm, searchTerm }) => {
@@ -35,6 +35,9 @@ export const Buscador = ({ setSearchTerm, searchTerm }) => {
 
 
                 </button>
+
+
+              
             </div>
 
         </>

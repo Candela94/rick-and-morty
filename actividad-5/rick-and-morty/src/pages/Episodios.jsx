@@ -65,6 +65,7 @@ const Episodios = () => {
 
             <main className="Main-personajes">
                 <h1 className="Main-h1">Episodios</h1>
+                
                 <Buscador setSearchTerm={setSearchTerm} />
 
 
