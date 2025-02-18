@@ -1,22 +1,25 @@
 
+import { BrowserRouter } from 'react-router';
+import { NavLink } from 'react-router';
 import './footer.css';
 
 
 
 
 
-export const Nav = ({}) => {
+export const Footer = ({}) => {
 
 
     return (
 
 
         <>
+       
 
             <nav className='Nav'>
                 <ul className='Nav-ul'>
 
-                    <li><a href="./episodios"><div className="Nav-item">
+                    <li><NavLink to='/episodios'><div className="Nav-item">
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -24,21 +27,21 @@ export const Nav = ({}) => {
                         </svg>
 
                         <p>Episodios</p>
-                    </div>
-                    </a></li>
+                    </div></NavLink>
+                   </li>
 
 
 
-                    <li><a href="./personajes"><div className="Nav-item">
+                    <li><NavLink to='/personajes'><div className="Nav-item">
 
                        <img src="../public/img/rick-icono.png" alt="rick" style={{width: '48px'}} />
                         <p>Personajes</p>
-                    </div>
-                    </a></li>
+                    </div></NavLink>
+                   </li>
 
 
 
-                    <li><a href="./lugares"><div className="Nav-item">
+                    <li><NavLink to='/lugares'><div className="Nav-item">
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
@@ -46,15 +49,15 @@ export const Nav = ({}) => {
                         </svg>
 
                         <p>Lugares</p>
-                    </div>
-                    </a></li>
+                    </div></NavLink>
+                    </li>
 
 
 
 
                 </ul>
             </nav>
-
+            
         </>
     )
 

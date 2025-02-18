@@ -7,7 +7,7 @@ import viteLogo from '/vite.svg'
 import './css/App.css'
 
 
-import { Nav } from './components/footer/Nav'
+import { Footer } from './components/footer/Footer'
 import { Buscador } from './components/Buscador'
 
 
@@ -20,17 +20,13 @@ import Episodios from './pages/Episodios'
 import Lugares from './pages/Lugares'
 import Inicio from './pages/Inicio'
 
+import { BrowserRouter, Route, Routes } from 'react-router'
+
+
 
 function App() {
 
-  const pathvalue= window.location.pathname.slice(1) || 'inicio';
-  console.log(pathvalue);
-  let page;
-
-  switch(pathvalue) {
-    case 'personajes' : page = <Personajes />; break; case 'episodios': page = <Episodios />; break; case 'lugares': page = <Lugares /> ; break; default:page = <Inicio />
-  }
-
+  
 
   const [count, setCount] = useState(0)
 
@@ -39,15 +35,27 @@ function App() {
   return (
     <>
  
- <Header />
+    <BrowserRouter> 
+    
+    
+    <Routes>
 
-{/* 
-<Inicio /> */}
- {page}
+      <Route path='/' element={<Inicio />}></Route>
+      <Route path='/lugares' element={<Lugares />}></Route>
+      <Route path='/episodios' element={<Episodios />}></Route>
+      <Route path='personajes' element={<Personajes />}></Route>
+
+    </Routes>
+    
+    
+    
+    </BrowserRouter>
+
+
 
 
     
-    <Nav />
+  
   
 
 

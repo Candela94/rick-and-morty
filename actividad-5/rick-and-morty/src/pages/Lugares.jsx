@@ -5,6 +5,8 @@ import { CardLugares } from "@/components/cards/Cards"
 import { Buscador } from "@/components/Buscador";
 import { LuChevronsRight } from "react-icons/lu";
 import { LuChevronsLeft } from "react-icons/lu";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/footer/Footer";
 
 const Lugares = () => {
 
@@ -56,7 +58,7 @@ const Lugares = () => {
     }, [searchTerm, data]);
 
     const obtenerLugares = async () => {
-        const response = await fetch(`https://rickandmortyapi.com/api/location`)
+        const response = await fetch(`https://rickandmortyapi.com/api/location&page=${pagina}&name=${searchTerm}`)
         const jsonData = await response.json();
 
         setData(jsonData);
@@ -74,6 +76,8 @@ const Lugares = () => {
     return (
 
         <>
+
+        <Header />
             <main className="Main-personajes">
                 <h1 className="Main-h1">Lugares</h1>
 
@@ -109,7 +113,7 @@ const Lugares = () => {
 
             </main>
 
-
+<Footer />
         </>
     )
 }

@@ -5,10 +5,13 @@ import { useState, useEffect } from "react";
 import { Card } from "@/components/cards/Cards";
 import { Buscador } from "@/components/Buscador";
 
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/footer/Footer";
+
 import { PiGenderFemaleBold } from "react-icons/pi";
 import { IoMaleSharp } from "react-icons/io5";
 import { LiaRedditAlien } from "react-icons/lia";
-// import plugin from "eslint-plugin-react";
+
 import { GiDeadHead } from "react-icons/gi";
 
 import { FaFaceSmile } from "react-icons/fa6";
@@ -26,8 +29,11 @@ import { FaQuestion } from "react-icons/fa";
 const Personajes = () => {
 
 
-    const [datos, setDatos] = useState({});
+   
     const [personajes, setPersonajes] = useState([]);
+
+    const [totalPaginas, setTotalPaginas] = useState(1)
+    const [totalPersonajes, setTotalPersonajes] = useState(0)
 
 
     const [searchTerm, setSearchTerm] = useState("");
@@ -41,7 +47,7 @@ const Personajes = () => {
 
 
     const [pagina, setPagina] = useState(1)
-   
+
 
 
 
@@ -50,31 +56,59 @@ const Personajes = () => {
 
         const response = await fetch(`https://rickandmortyapi.com/api/character?&page=${pagina}&name=${searchTerm}`)
         const jsonData = await response.json();
-        setDatos(jsonData);
-        // setPersonajes(jsonData.results)
+
+        setPersonajes(jsonData.results)
+
+        setTotalPaginas(jsonData.info.pages)
+        setTotalPersonajes(jsonData.info.count)
+        
 
 
     }
 
 
-useEffect(() => {
-    obtenerDatos()
-},[])
-    
+    const queryParams = () => {
+
+        let url = `https://rickandmortyapi.com/api/character?&page=${pagina}&name=${searchTerm}`
+
+        if(filtroGenero) {
+            url += `&gender=${filtroGenero}`
+        }
+
+        if(filtroEstado) {
+            url += `&status=${filtroEstado}`
+        }
+
+        if(filtroEspecie) {
+            url += `&species=${filtroEspecie}`
+        }
+
+        return url;
+
+
+    }
+
+
+    useEffect(() => {
+        obtenerDatos()
+       
+    }, [pagina, searchTerm,filtroGenero,filtroEspecie,filtroEstado,totalPaginas,totalPersonajes])
+
+
     
 
     useEffect(() => {
 
-        if(searchTerm.length>3){
+        if (searchTerm.length > 3) {
 
             obtenerDatos();
         }
 
-        
-       
+
+
         console.log(`pagina actual ${pagina}`)
 
-       
+
     }, [pagina, searchTerm, filtroGenero, filtroEspecie, filtroEstado])
 
 
@@ -90,9 +124,6 @@ useEffect(() => {
             setPagina(pagina - 1)
         }
     }
-
-
- 
 
 
 
@@ -139,18 +170,34 @@ useEffect(() => {
 
     return (
         <>
+        <Header />
+
+
             <main className="Main-personajes">
                 <h1 className="Main-h1">Personajes</h1>
+
                 <Buscador setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
 
-                <SubHeader  />
+                <SubHeader />
                 <div className="Paginacion">
+
                     <LuChevronsLeft onClick={handleAnt} style={{ color: 'rgba(243, 246, 242, 0.6)', cursor: 'pointer' }} />
-                    <p style={{ color: 'rgba(243, 246, 242, 0.6)', fontSize: '12px' }}>Estás en la página {pagina}</p>
+
+
+                    <div className="Pag-personajes">
+                    <p style={{ color: 'rgba(243, 246, 242, 0.6)', fontSize: '12px' }}>Estás en la página {pagina} de {totalPaginas}</p>
+                    <p style={{ color: 'rgba(243, 246, 242, 0.6)', fontSize: '12px' }}>Mostrando {personajes.length} personajes de {totalPersonajes}</p>
+                    </div>
+
+
+
                     <LuChevronsRight onClick={handleNext} style={{ color: 'rgba(243, 246, 242, 0.6)', cursor: 'pointer' }} />
 
 
                 </div>
+
+
+
                 <div className="Galeria">
 
 
@@ -200,6 +247,8 @@ useEffect(() => {
                     )}
                 </div>
             </main>
+
+            <Footer />
         </>
     )
 

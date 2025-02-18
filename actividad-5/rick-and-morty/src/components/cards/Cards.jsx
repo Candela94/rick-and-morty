@@ -2,6 +2,8 @@
 import './cards.css'
 import { SlLocationPin } from "react-icons/sl";
 
+import { GrLocation } from "react-icons/gr";
+import { FaRegCirclePlay } from "react-icons/fa6";
 
 
 export const Card = ({ nombre, genero, origen, especie, vivo, episodio, imagen }) => {
@@ -61,21 +63,21 @@ export const CardLugares = ({ nombre, tipo, dimension, residentes, img, creacion
             <div className="Card-lugares">
 
 
-                <div className="Card-imgInfo">
-                    <img src={img} alt="lugar" className="Card-imgLugar" />
+                <div className="Card-info">
 
-                    <div className="Infor-lugar">
-                        <h3 className="Card-titulo">{nombre}</h3>
-                        <p className="Card-p">{tipo}</p>
-                        <p className="Card-p">{dimension}</p>
-                        <p className="Card-p">{creacion}</p>
+                    <div className="Informacion-icono">
+                    <GrLocation />
+                        <h4 className="Card-titulo">{nombre}</h4>
                     </div>
+                    <p className="Card-p">{tipo}</p>
+                    <p className="Card-p">{dimension}</p>
+                    <p className="Card-p">{creacion}</p>
+
                 </div>
 
 
                 <div className="Residentes">
-                    <img src={residentes} alt="residente1" className="Residente1" />
-                    <img src={residentes} alt="residente2" className="Residente1" />
+                   
                 </div>
 
 
@@ -84,4 +86,36 @@ export const CardLugares = ({ nombre, tipo, dimension, residentes, img, creacion
         </>
 
     )
+}
+
+
+
+
+export const CardEpisodios = ({name, date, episode}) => {
+
+
+
+    return(
+
+        <>
+        
+        <div className="Card-episodios">
+        <div className="Icono">
+        <FaRegCirclePlay style={{fontSize:'30px', color: '#2FD7D8'}}/>
+        </div>
+
+        <div className="Card-infoEpisodio">
+            <h4>{name}</h4>
+            <p className='Card-p'>{date}</p>
+            <p className='Card-p'>{episode}</p>
+        </div>
+
+        </div>
+        
+        </>
+
+
+    )
+
+
 }

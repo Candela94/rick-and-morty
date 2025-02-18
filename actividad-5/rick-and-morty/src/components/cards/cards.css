@@ -51,6 +51,7 @@
 
 .Informacion-icono{
     display: flex;
+    align-items: center;
     gap: 0.5rem;
 }
 
@@ -76,13 +77,14 @@
 
 .Card-lugares{
     display: flex;
-  
+  justify-content: space-between;
     border-radius: 8px;
     gap: 1rem;
     padding: 1rem;
     color: var(--text);
     background-color: #2d2d2d;
     transition: transform 0.3s ease;
+    box-shadow: 0.8px 0.8px 5px #2d2d2d;
   
 }
 
@@ -91,14 +93,58 @@
     transform: scale(1.05);
 }
 
-.Card-imgLugar{
-    width: 100%;
-    border-radius: 6px;
-}
+
 
 
 .Residentes{
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
+}
+
+.Card-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+
+
+/* Card episodios */
+
+
+.Card-episodios{
+
+
+
+    display: flex;
+    width: 200px;
+    flex-direction: column; 
+    border-radius: 8px;
+    gap: 1rem;
+    padding: 1rem;
+    color: var(--text);
+    background-color: #2d2d2d;
+    transition: transform 0.3s ease;
+}
+
+
+
+.Icono{
+
+    width: 50%;
+    height: 60px;
+    border-radius: 6px;
+ 
+    box-shadow: 1px 1px 5px var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Card-infoEpisodio{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }

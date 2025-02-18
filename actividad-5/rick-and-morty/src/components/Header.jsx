@@ -1,6 +1,10 @@
+
+
+
 import { PiGenderIntersexBold } from "react-icons/pi";
 import { RiAliensFill } from "react-icons/ri"; 
 import { FaFaceSmile } from "react-icons/fa6";
+import { NavLink } from "react-router";
 
 import { useState } from "react";
 
@@ -13,7 +17,7 @@ export const  Header = () => {
         
         <header className="Header">
             <nav className="Header-nav">
-                <a href="/inicio"><img className = "Header-img" src="./public/img/rick-morty.png" alt="logo" /></a>
+                <NavLink to='/'><img className = "Header-img" src="./public/img/rick-morty.png" alt="logo" /></NavLink>
             </nav>
         </header>
         
@@ -45,6 +49,7 @@ const handleAbrirMenu = (categoria) => {
 
 return(
     <>
+
 
 
     <header className={`SubHeader ${menu ? 'open' : ''}`}> 

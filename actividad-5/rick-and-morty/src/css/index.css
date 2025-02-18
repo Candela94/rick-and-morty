@@ -103,8 +103,30 @@ body {
 }
 
 
+.Pag-personajes{
+
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: center;
+
+}
+
+
 .Main-h1{
   color: var(--text);
   font-size: 2.5rem;
   letter-spacing: 3px;
+}
+
+
+
+/* Episodios */
+
+.Galeria-episodios{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
