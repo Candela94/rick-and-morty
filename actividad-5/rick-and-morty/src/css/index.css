@@ -11,7 +11,7 @@
 
 
  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
---background:  #242424;
+--background:  #1b1b1b;
 --primary: #a1f771;
 --secondary: #2FD7D8;
 --text: rgba(243, 246, 242, 0.8);
@@ -49,6 +49,7 @@ body {
   gap: 2rem;
   height: 100vh;
   position: relative;
+  background-image: url('../img/fondo.png'); ;
  
 }
 
@@ -103,10 +104,10 @@ body {
 
 .Circle{
   width: 25%;
-  height: 5px;
-  background-color: #52b61c;
+  height: 3.5px;
+  background-color: #72cf41;
   border-radius: 100%;
-  box-shadow: 1px 1px 10px #a1f771 ;
+  box-shadow: 10px 10px 20px #a1f771 ;
 }
 
 /* Página personajes */
@@ -115,8 +116,9 @@ body {
 .Main-personajes{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   margin: 1rem;
+  
 }
 
 .Paginacion{

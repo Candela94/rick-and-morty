@@ -54,13 +54,13 @@ const Personajes = () => {
 
     const obtenerDatos = async () => {
 
-        const response = await fetch(`https://rickandmortyapi.com/api/character?&page=${pagina}&name=${searchTerm}`)
+        const response = await fetch(queryParams())
         const jsonData = await response.json();
 
         setPersonajes(jsonData.results)
 
-        setTotalPaginas(jsonData.info.pages)
-        setTotalPersonajes(jsonData.info.count)
+        // setTotalPaginas(jsonData.info.pages)
+        // setTotalPersonajes(jsonData.info.count)
         
 
 
@@ -72,15 +72,15 @@ const Personajes = () => {
         let url = `https://rickandmortyapi.com/api/character?&page=${pagina}&name=${searchTerm}`
 
         if(filtroGenero) {
-            
+            url += `&gender=${filtroGenero}`
         }
 
         if(filtroEstado) {
-          
+          url +=`&status=${filtroEstado}` 
         }
 
         if(filtroEspecie) {
-            
+            url +=`&species=${filtroEspecie}`
         }
 
         return url;
@@ -92,25 +92,23 @@ const Personajes = () => {
     useEffect(() => {
         obtenerDatos()
        
-    }, [pagina, searchTerm,filtroGenero,filtroEspecie,filtroEstado,totalPaginas,totalPersonajes])
+    }, [pagina, searchTerm,filtroGenero,filtroEspecie, filtroEstado])
 
 
     
 
-    useEffect(() => {
+   
+    const handleGenero = (genero) => {
+        setFiltroGenero(genero);
+    }
 
-        if (searchTerm.length > 3) {
+    const handleEspecie = (especie) => {
+        setFiltroEspecie(especie);
+    }
 
-            obtenerDatos();
-        }
-
-
-
-        console.log(`pagina actual ${pagina}`)
-
-
-    }, [pagina, searchTerm, filtroGenero, filtroEspecie, filtroEstado])
-
+    const handleEstado = (estado) => {
+        setFiltroEstado(estado);
+    }
 
 
 
@@ -174,20 +172,23 @@ const Personajes = () => {
 
 
             <main className="Main-personajes">
-                <h1 className="Main-h1">Personajes</h1>
+                <h1 className="Main-h1">Characters</h1>
 
                 <Buscador setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
 
-                <SubHeader />
+                <SubHeader 
+                handleGenero={handleGenero}
+                handleEspecie= {handleEspecie}
+                handleEstado= {handleEstado}/>
                 <div className="Paginacion">
 
                     <LuChevronsLeft onClick={handleAnt} style={{ color: 'rgba(243, 246, 242, 0.6)', cursor: 'pointer' }} />
 
 
-                    <div className="Pag-personajes">
+                    {/* <div className="Pag-personajes">
                     <p style={{ color: 'rgba(243, 246, 242, 0.6)', fontSize: '12px' }}>Estás en la página {pagina} de {totalPaginas}</p>
                     <p style={{ color: 'rgba(243, 246, 242, 0.6)', fontSize: '12px' }}>Mostrando {personajes.length} personajes de {totalPersonajes}</p>
-                    </div>
+                    </div> */}
 
 
 

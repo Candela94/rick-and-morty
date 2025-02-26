@@ -65,7 +65,7 @@ const Episodios = () => {
 
 
             <main className="Main-personajes">
-                <h1 className="Main-h1">Episodios</h1>
+                <h1 className="Main-h1">Episodes</h1>
                 
                 <Buscador setSearchTerm={setSearchTerm} />
 
@@ -76,11 +76,11 @@ const Episodios = () => {
                     <LuChevronsLeft onClick={handleAnt} style={{ color: 'rgba(243, 246, 242, 0.6)', cursor: 'pointer' }} />
 
 
-                    <div className="Pag-personajes">
+                    {/* <div className="Pag-personajes">
                         <p style={{ color: 'rgba(243, 246, 242, 0.6)', fontSize: '12px' }}>Estás en la página {pagina} de {totalPaginas}</p>
                         <p style={{ color: 'rgba(243, 246, 242, 0.6)', fontSize: '12px' }}>Mostrando {episodios.length} episodios de {totalEpisodios}</p>
                     </div>
-
+ */}
 
 
                     <LuChevronsRight onClick={handleNext} style={{ color: 'rgba(243, 246, 242, 0.6)', cursor: 'pointer' }} />

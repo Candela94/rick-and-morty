@@ -79,12 +79,12 @@ const Lugares = () => {
 
         <Header />
             <main className="Main-personajes">
-                <h1 className="Main-h1">Lugares</h1>
+                <h1 className="Main-h1">Places</h1>
 
                 <Buscador setSearchTerm={setSearchTerm} />
                 <div className="Paginacion">
                     <LuChevronsLeft onClick={handleAnt} style={{ color: 'rgba(243, 246, 242, 0.6)', cursor:'pointer' }} />
-                    <p style={{ color: 'rgba(243, 246, 242, 0.6)', fontSize: '12px' }}>Estás en la página {pagina}</p>
+                    {/* <p style={{ color: 'rgba(243, 246, 242, 0.6)', fontSize: '12px' }}>Estás en la página {pagina}</p> */}
                     <LuChevronsRight onClick={handleNext} style={{ color: 'rgba(243, 246, 242, 0.6)', cursor:'pointer' }} />
 
 

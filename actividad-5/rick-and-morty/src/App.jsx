@@ -20,6 +20,8 @@ import Episodios from './pages/Episodios'
 import Lugares from './pages/Lugares'
 import Inicio from './pages/Inicio'
 
+import { NavLink } from 'react-router'
+
 import { BrowserRouter, Route, Routes } from 'react-router'
 import { CheckBox } from './components/CheckBox'
 

@@ -51,6 +51,9 @@ font-weight: lighter;
 
 
 
+.Nav-ul a{
+    color: var(--secondary);
+}
 
 
 

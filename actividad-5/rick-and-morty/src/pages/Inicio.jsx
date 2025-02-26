@@ -10,7 +10,7 @@ const Inicio = () => {
             <div className="Inicio">
                 <img className="Inicio-img" src="../public/img/puerta.png" alt="inicio" />
                 <img className="Titulo" src="../public/img/rick-morty.png" alt="" />
-                <div className="Intro-button"><a href="./personajes">Entrar</a></div>
+                <div className="Intro-button"><a href="./personajes">Start</a></div>
 
                 <div className="Meeseeks">
                     <img
