@@ -48,6 +48,7 @@ body {
   align-items: center;
   gap: 2rem;
   height: 100vh;
+  overflow: hidden;
   position: relative;
   background-image: url('../img/fondo.png'); ;
  
@@ -55,13 +56,13 @@ body {
 
 
 .Inicio-img{
-  width: 70%;
+  max-width: 70%;
   
 
 }
 
 .Titulo{
-  width: 60%;
+  max-width: 60%;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -92,7 +93,7 @@ body {
 
 
 .Inicio-img2{
-  width: 15%;
+  max-width: 15%;
 }
 
 .Meeseeks{
@@ -100,6 +101,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+ 
 }
 
 .Circle{
@@ -116,6 +118,8 @@ body {
 .Main-personajes{
   display: flex;
   flex-direction: column;
+  max-width: 100%;
+  height: 90vh;
   gap: 1.5rem;
   margin: 1rem;
   

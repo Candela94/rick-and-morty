@@ -7,6 +7,8 @@ const Inicio = () => {
     return (
 
         <>
+
+
             <div className="Inicio">
                 <img className="Inicio-img" src="../public/img/puerta.png" alt="inicio" />
                 <img className="Titulo" src="../public/img/rick-morty.png" alt="" />
@@ -14,7 +16,6 @@ const Inicio = () => {
 
                 <div className="Meeseeks">
                     <img
-
                         className="Inicio-img2" src="../public/img/meeseeks.png" alt="inicio" />
                     <div className="Circle"></div>
 

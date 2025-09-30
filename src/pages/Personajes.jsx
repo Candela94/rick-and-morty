@@ -129,39 +129,6 @@ const Personajes = () => {
 
 
 
-    // useEffect(() => {
-    //     // Solo filtrar si datos.results está disponible
-    //     if (datos.results) {
-    //         let filtered = datos.results
-
-
-    //         //Filtro por nombre 
-    //         if (searchTerm !== "") {
-
-    //             filtered = datos.results.filter((pers) =>
-    //                 pers.name.toLowerCase().includes(searchTerm.toLowerCase())
-    //             );
-    //         }
-
-    //         //Filtro por género
-    //         if (filtroGenero !== "") {
-    //             filtered = filtered.filter((pers) => pers.gender === filtroGenero)
-    //         }
-    //         console.log(filtroGenero)
-
-
-    //         setPersonajes(filtered);
-    //     }
-    // }, [searchTerm, datos, filtroGenero]);
-
-
-
-    //Filtro por genero
-
-    // const handleGenero = (genero) => {
-    //     setFiltroGenero(genero)   //Alternar entre los géneros
-    // }
-
 
 
 
