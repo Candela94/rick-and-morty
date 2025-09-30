@@ -17,7 +17,7 @@ export const  Header = () => {
         
         <header className="Header">
             <nav className="Header-nav">
-                <NavLink to='/'><img className = "Header-img" src="./public/img/rick-morty.png" alt="logo" /></NavLink>
+                <NavLink to='/'><img className = "Header-img" src="/img/rick-morty.png" alt="logo" /></NavLink>
             </nav>
         </header>
         
