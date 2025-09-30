@@ -34,7 +34,7 @@ export const Footer = ({}) => {
 
                     <li><NavLink to='/personajes' className='active'><div className="Nav-item">
 
-                       <img src="../public/img/rick-icono.png" alt="rick" style={{width: '48px'}} />
+                       <img src="/img/rick-icono.png" alt="rick" style={{width: '48px'}} />
                         <p>Characters</p>
                     </div></NavLink>
                    </li>
